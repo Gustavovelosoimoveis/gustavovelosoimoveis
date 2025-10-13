@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Links | Gustavo Veloso Imóveis</title>
+  <meta name="description" content="Acesse rapidamente meus canais de contato e imóveis." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <!-- Reaproveita o CSS principal do site para manter a identidade visual -->
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Estilização específica para a página de links */
+    .links-page {
+      padding: 60px 0;
+      text-align: center;
+    }
+    .links-page h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: var(--azul);
+      margin-bottom: 24px;
+    }
+    .links-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .links-buttons a {
+      display: block;
+      background-color: var(--dourado);
+      color: var(--azul);
+      font-weight: 600;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 320px;
+      transition: background-color 0.2s, transform 0.2s;
+    }
+    .links-buttons a:hover {
+      background-color: #b8983a;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho reutilizando a marca do site -->
+  <header class="site-header">
+    <div class="container header-grid">
+      <div class="brand">
+        <img src="assets/logo-site.png" alt="Logo Gustavo Veloso" class="logo" />
+        <div>
+          <h1>Gustavo Veloso</h1>
+          <p class="sub">Corretor de Imóveis • CRECI RJ 105.980</p>
+        </div>
+      </div>
+      <!-- Mantém o menu simples para esta página -->
+      <nav class="nav">
+        <a href="index.html#home">Home</a>
+      </nav>
+    </div>
+  </header>
+  <!-- Conteúdo -->
+  <section class="links-page">
+    <div class="container">
+      <h2>Meus links</h2>
+      <div class="links-buttons">
+        <a href="index.html#imoveis">🌐 Ver imóveis no site</a>
+        <a href="https://wa.me/5521979915391?text=Ol%C3%A1%20Gustavo%2C%20vi%20seu%20perfil%20no%20Instagram%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20im%C3%B3veis%20dispon%C3%ADveis." target="_blank" rel="noopener">💬 Fale comigo no WhatsApp</a>
+        <a href="https://www.olx.com.br/perfil/gustavo-veloso-7e1e6924" target="_blank" rel="noopener">📋 Imóveis na OLX</a>
+        <a href="https://www.instagram.com/gustavovelosoimoveis" target="_blank" rel="noopener">📸 Meu Instagram</a>
+        <a href="index.html#contato">📫 Fale comigo (Formulário)</a>
+      </div>
+    </div>
+  </section>
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Gustavo Veloso • CRECI RJ 105.980 • Maricá – RJ</p>
+    </div>
+  </footer>
+</body>
+</html>
