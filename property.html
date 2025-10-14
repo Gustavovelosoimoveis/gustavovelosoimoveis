@@ -1,76 +1,149 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Imóvel | Detalhes</title>
-  <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imóvel - Gustavo Veloso Imóveis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-grid">
-      <div class="brand">
-        <img src="assets/logo-site.png" alt="Logo" class="logo" />
-        <div>
-          <h1>Gustavo Veloso</h1>
-          <p class="sub">Corretor de Imóveis • CRECI RJ 105.980</p>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-grid">
+                <div class="brand">
+                    <img src="logo.png" alt="Gustavo Veloso Imóveis" class="logo">
+                    <div>
+                        <h1>Gustavo Veloso</h1>
+                        <div class="sub">Imóveis</div>
+                    </div>
+                </div>
+                <nav class="nav">
+                    <a href="index.html">Início</a>
+                    <a href="bio.html">Sobre</a>
+                    <a href="#contato" class="btn">Contato</a>
+                </nav>
+            </div>
         </div>
-      </div>
-      <nav class="nav">
-        <a href="index.html#home">Home</a>
-        <a href="index.html#sobre">Sobre</a>
-        <a href="index.html#imoveis">Imóveis</a>
-        <a href="index.html#servicos">Serviços</a>
-        <a href="index.html#contato" class="btn">Contato</a>
-        <a href="https://www.instagram.com/gustavovelosoimoveis/" target="_blank" rel="noopener" class="btn">Instagram</a>
-      </nav>
+    </header>
+
+    <!-- Property Content -->
+    <main class="property-main">
+        <div class="container">
+
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="index.html">Início</a> > 
+                <a href="index.html">Imóveis</a> > 
+                <span id="property-code">Carregando...</span>
+            </nav>
+
+            <!-- Property Header -->
+            <div class="property-header">
+                <div class="property-title-section">
+                    <h1 id="title">Carregando imóvel...</h1>
+                    <div class="property-price-header">
+                        <span class="price-label">Valor</span>
+                        <span id="price" class="price-value-large">Carregando...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Content Grid -->
+            <div class="property-grid">
+
+                <!-- Left Column - Gallery -->
+                <div class="property-gallery-section">
+                    <h3>Fotos do imóvel</h3>
+                    <div id="gallery" class="gallery"></div>
+                </div>
+
+                <!-- Right Column - Info -->
+                <div class="property-info-section">
+
+                    <!-- Specifications -->
+                    <div class="property-specs-card">
+                        <h3>Especificações técnicas</h3>
+                        <div id="specs"></div>
+                    </div>
+
+                    <!-- Characteristics -->
+                    <div class="property-features-card">
+                        <h3>Características</h3>
+                        <ul id="meta" class="features-list"></ul>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="property-description-card">
+                        <h3>Descrição</h3>
+                        <div id="desc" class="description-content"></div>
+                    </div>
+
+                    <!-- Contact CTA -->
+                    <div class="property-contact-card">
+                        <h3>Interessou-se?</h3>
+                        <p>Fale comigo no WhatsApp para mais informações ou agendar uma visita.</p>
+                        <a href="#" id="wa-button" class="btn primary btn-large">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.386"/>
+                            </svg>
+                            Conversar no WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lb" class="lightbox-backdrop">
+        <div class="lightbox-content">
+            <img id="lbImg" src="" alt="" class="lightbox-img">
+            <button type="button" class="lightbox-btn lightbox-close" onclick="document.getElementById('lb').classList.remove('active')">✕</button>
+        </div>
     </div>
-  </header>
 
-  <section>
-    <div class="container">
-      <h3 id="title"></h3>
-      <p id="price" class="price" style="margin: 8px 0 18px;"></p>
-      <div id="meta-list" class="meta-list"></div>
-      <div class="gallery" id="gallery"></div>
-      <div class="card" style="margin-top: 18px;">
-        <h4>Descrição</h4>
-        <div id="desc"></div>
-        <a class="btn primary" id="wacta" target="_blank" rel="noopener">
-          <svg width="20" height="20" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon">
-            <path fill="#25D366" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
-          </svg>
-          Falar no WhatsApp
-        </a>
-        <a class="btn" href="index.html#imoveis" style="margin-left: 8px;">← Voltar aos imóveis</a>
-      </div>
-    </div>
-  </section>
+    <!-- Contact Section -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h3>Entre em contato</h3>
+            <div class="grid-contact">
+                <a href="#" class="btn wa-button">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.386"/>
+                    </svg>
+                    WhatsApp
+                </a>
+                <a href="mailto:gustavoveloso2@icloud.com" class="btn">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    E-mail
+                </a>
+            </div>
+        </div>
+    </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Gustavo Veloso • CRECI RJ 105.980 • Maricá – RJ</p>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Gustavo Veloso Imóveis. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-  <a class="fab" id="wafab" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <svg width="28" height="28" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-      <path fill="#ffffff" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
-    </svg>
-  </a>
+    <!-- WhatsApp Floating Button -->
+    <a href="#" class="fab wa-button">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.386"/>
+        </svg>
+    </a>
 
-  <!-- Lightbox for gallery -->
-  <div class="lightbox-backdrop" id="lb">
-    <div class="lightbox-content">
-      <button class="lightbox-btn" id="lbPrev" aria-label="Anterior">‹</button>
-      <img id="lbImg" class="lightbox-img" src="" alt="Foto do imóvel" />
-      <button class="lightbox-btn" id="lbNext" aria-label="Próxima">›</button>
-      <button class="lightbox-btn lightbox-close" id="lbClose" aria-label="Fechar">✕</button>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
