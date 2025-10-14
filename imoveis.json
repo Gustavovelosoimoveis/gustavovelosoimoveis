@@ -1,0 +1,72 @@
+{
+  "imoveis": [
+    {
+      "codigo": "GV001",
+      "slug": "royal-garden-i-marica",
+      "titulo": "Casa 3 qts (1 suíte) – Royal Garden I",
+      "tipo": "Casa",
+      "cidade": "Maricá",
+      "bairro": "Royal Garden I",
+      "preco": "R$ 575.000",
+      "precoNumero": 575000,
+      "area": 99,
+      "areaTerreno": 240,
+      "quartos": 3,
+      "suites": 1,
+      "banheiros": 2,
+      "vagas": 1,
+      "caracteristicas": ["Área gourmet", "Condomínio fechado", "Piscina"],
+      "fotos": [
+        "https://i.imgur.com/wDq3g0g.jpg",
+        "https://i.imgur.com/LhGot0s.jpg",
+        "https://i.imgur.com/UxETkOW.jpg",
+        "https://i.imgur.com/ATbKY91.jpg",
+        "https://i.imgur.com/356Zuqq.jpg",
+        "https://i.imgur.com/QrdpyCr.jpg",
+        "https://i.imgur.com/e8dfV5b.jpg",
+        "https://i.imgur.com/LYwvdyH.jpg",
+        "https://i.imgur.com/h7YMmdM.jpg",
+        "https://i.imgur.com/Dj6NJdW.jpg",
+        "https://i.imgur.com/37Sf3Pg.jpg"
+      ],
+      "descricao": "Linda casa no condomínio Royal Garden I com área gourmet completa e piscina. Localização privilegiada com fácil acesso ao comércio local. Imóvel com 3 quartos sendo 1 suíte, 2 banheiros, 1 vaga de garagem, área construída de 99m² em terreno de 240m². Condomínio fechado com segurança e infraestrutura completa.",
+      "whatsapp": "Olá Gustavo, tenho interesse na casa GV001 do Royal Garden I (R$ 575.000) e gostaria de agendar uma visita."
+    },
+    {
+      "codigo": "GV002",
+      "slug": "parque-das-chacaras-marica",
+      "titulo": "Casa 3 qts (1 suíte) – Parque das Chácaras",
+      "tipo": "Casa",
+      "cidade": "Maricá", 
+      "bairro": "Parque das Chácaras",
+      "preco": "R$ 530.000",
+      "precoNumero": 530000,
+      "area": 108,
+      "areaTerreno": 250,
+      "quartos": 3,
+      "suites": 1,
+      "banheiros": 2,
+      "vagas": 1,
+      "caracteristicas": [
+        "Vista para lagoa, mar e montanhas",
+        "Área gourmet com lavabo",
+        "Garagem coberta",
+        "Suíte com closet",
+        "Pé-direito alto",
+        "Jardim e gramado",
+        "Chuveirão",
+        "Teto rebaixado em gesso",
+        "Iluminação LED"
+      ],
+      "fotos": [
+        "https://imgur.com/v14SMUt",
+        "https://imgur.com/dTMkJyK",
+        "https://imgur.com/1Moyqge", 
+        "https://imgur.com/hJ06YE7",
+        "https://imgur.com/fKrhUmJ"
+      ],
+      "descricao": "Linda casa com vista para lagoa, mar e montanhas, localizada no Loteamento Parque das Chácaras, a apenas 400m da rodovia e 5 minutos do Centro de Maricá. Com fachada moderna e acabamento de primeira, conta com garagem coberta para um carro, três quartos (sendo uma suíte com closet), sala com pé-direito alto, cozinha, banheiro social, área de serviço, área gourmet com lavabo, jardim, gramado na frente e atrás, e chuveirão. O projeto foi pensado para oferecer conforto, estilo e praticidade, com teto todo rebaixado em gesso e iluminação completa em LED. São 108m² de construção em um terreno de 250m².",
+      "whatsapp": "Olá Gustavo, tenho interesse na casa GV002 do Parque das Chácaras (R$ 530.000) com vista para lagoa e gostaria de agendar uma visita."
+    }
+  ]
+}
