@@ -1,5 +1,5 @@
-// GUSTAVO VELOSO IMÓVEIS - SISTEMA HÍBRIDO DEFINITIVO
-// GitHub (JSON) + Imgur (fotos) = SOLUÇÃO COMPLETA
+// GUSTAVO VELOSO IMÓVEIS - SISTEMA HÍBRIDO CORRIGIDO
+// Não sobrescreve título, renderiza specs corretamente
 
 const WA_NUMBER = "5521979915391";
 
@@ -119,7 +119,7 @@ function renderizarCards(imoveis) {
   console.log(`✅ GUSTAVO: ${imoveis.length} cards renderizados com sucesso!`);
 }
 
-// Renderizar página individual do imóvel
+// CORRIGIDO: Renderizar página individual sem sobrescrever título
 function renderizarImovel(imoveis) {
   const slugParam = new URLSearchParams(window.location.search).get("slug");
   if (!slugParam) return;
@@ -141,19 +141,26 @@ function renderizarImovel(imoveis) {
 
   console.log(`✅ GUSTAVO: Renderizando imóvel: ${imovel.titulo}`);
 
-  // Atualizar elementos básicos
+  // CORRIGIDO: Atualizar elementos sem sobrescrever
   const titleEl = document.getElementById('title');
   const priceEl = document.getElementById('price');
   const codeEl = document.getElementById('property-code');
 
-  if (titleEl) titleEl.textContent = imovel.titulo;
-  if (priceEl) priceEl.textContent = imovel.preco;
-  if (codeEl) codeEl.textContent = imovel.codigo;
+  // Só atualiza se os elementos existirem E estiverem com conteúdo padrão
+  if (titleEl && (titleEl.textContent === 'Carregando imóvel...' || titleEl.textContent.includes('Carregando'))) {
+    titleEl.textContent = imovel.titulo;
+  }
+  if (priceEl && (priceEl.textContent === 'Carregando...' || priceEl.textContent.includes('Carregando'))) {
+    priceEl.textContent = imovel.preco;
+  }
+  if (codeEl && (codeEl.textContent === 'Carregando...' || codeEl.textContent.includes('Carregando'))) {
+    codeEl.textContent = imovel.codigo;
+  }
 
   // Atualizar título da página
   document.title = `${imovel.titulo} - ${imovel.preco} - Gustavo Veloso Imóveis`;
 
-  // Atualizar especificações técnicas
+  // CORRIGIDO: Especificações técnicas em elemento específico
   const specsEl = document.getElementById('specs');
   if (specsEl) {
     specsEl.innerHTML = `
@@ -172,7 +179,7 @@ function renderizarImovel(imoveis) {
         </div>
         <div class="spec-item">
           <span class="spec-label">Suítes</span>
-          <span class="spec-value">${imovel.suites}</span>
+          <span class="spec-value">${imovel.suites || 0}</span>
         </div>
         <div class="spec-item">
           <span class="spec-label">Banheiros</span>
@@ -184,18 +191,21 @@ function renderizarImovel(imoveis) {
         </div>
       </div>
     `;
+    console.log('✅ GUSTAVO: Especificações renderizadas no elemento correto');
   }
 
   // Meta características
   const metaEl = document.getElementById('meta');
   if (metaEl && imovel.caracteristicas) {
     metaEl.innerHTML = imovel.caracteristicas.map(item => `<li>${item}</li>`).join('');
+    console.log('✅ GUSTAVO: Características renderizadas');
   }
 
   // Descrição
   const descEl = document.getElementById('desc');
   if (descEl) {
     descEl.innerHTML = imovel.descricao || '<p>Imóvel em excelente estado e localização privilegiada.</p>';
+    console.log('✅ GUSTAVO: Descrição renderizada');
   }
 
   // Galeria com fotos otimizadas
@@ -207,7 +217,7 @@ function renderizarImovel(imoveis) {
   const message = imovel.whatsapp || `Olá Gustavo, tenho interesse no imóvel ${imovel.codigo} "${imovel.titulo}"`;
   setupWhatsApp(message);
 
-  console.log('✅ GUSTAVO: Página individual renderizada com sucesso!');
+  console.log('✅ GUSTAVO: Página individual renderizada CORRETAMENTE!');
 }
 
 // Configurar galeria com otimização Imgur
@@ -254,6 +264,7 @@ function openLightbox(fotos, startIndex) {
   function showImage() {
     lbImg.src = fotos[currentIndex];
     lbBackdrop.classList.add('active');
+    console.log(`📸 GUSTAVO: Exibindo foto ${currentIndex + 1}/${fotos.length}`);
   }
 
   function close() {
@@ -292,12 +303,13 @@ function setupWhatsApp(message) {
 
   waButtons.forEach((button) => {
     button.href = waUrl;
+    console.log('📱 GUSTAVO: WhatsApp configurado para botão');
   });
 }
 
 // Inicialização principal
 document.addEventListener('DOMContentLoaded', async () => {
-  console.log('🚀 GUSTAVO VELOSO IMÓVEIS - SISTEMA HÍBRIDO ATIVO');
+  console.log('🚀 GUSTAVO VELOSO IMÓVEIS - SISTEMA HÍBRIDO CORRIGIDO');
   console.log('📄 Carregando imóveis do JSON + fotos do Imgur...');
 
   // Carregar dados dos imóveis
