@@ -1,104 +1,154 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gustavo Veloso - Temporariamente Indisponível</title>
-  <style>
-    :root { 
-      --azul: #1E2A39; 
-      --dourado: #C8A046; 
-      --areia: #F4F2EE; 
-      --white: #ffffff; 
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { 
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-      background: linear-gradient(135deg, var(--azul) 0%, #2c3e50 100%); 
-      color: var(--white); 
-      min-height: 100vh; 
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
-      padding: 20px; 
-    }
-    .container { 
-      text-align: center; 
-      max-width: 500px; 
-      background: rgba(255, 255, 255, 0.08); 
-      backdrop-filter: blur(10px); 
-      border-radius: 20px; 
-      padding: 50px 40px; 
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); 
-      border: 1px solid rgba(255, 255, 255, 0.1); 
-    }
-    .logo { 
-      width: 70px; 
-      height: 70px; 
-      background: var(--white); 
-      border-radius: 50%; 
-      margin: 0 auto 20px; 
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
-      font-size: 28px; 
-      font-weight: 700; 
-      color: var(--azul); 
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
-    }
-    h1 { 
-      font-size: 2.2rem; 
-      margin-bottom: 8px; 
-      color: var(--dourado); 
-    }
-    .subtitle { 
-      font-size: 1rem; 
-      opacity: 0.9; 
-      margin-bottom: 30px; 
-    }
-    .pause-icon { 
-      font-size: 3rem; 
-      margin: 20px 0; 
-      opacity: 0.8; 
-    }
-    .message { 
-      font-size: 1.1rem; 
-      line-height: 1.6; 
-      margin-bottom: 30px; 
-      opacity: 0.9; 
-    }
-    .footer { 
-      margin-top: 30px; 
-      font-size: 0.9rem; 
-      opacity: 0.7; 
-    }
-    @media (max-width: 480px) { 
-      .container { padding: 40px 20px; } 
-      h1 { font-size: 1.8rem; } 
-    }
-    .container { animation: fadeIn 1s ease-in-out; }
-    @keyframes fadeIn { 
-      from { opacity: 0; transform: translateY(30px); } 
-      to { opacity: 1; transform: translateY(0); } 
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gustavo Veloso Imóveis & Documentação</title>
+  <meta name="description" content="Venda, locação, administração e consultoria imobiliária e documental em Maricá e região. CRECI RJ 105.980. Segurança jurídica e atendimento humanizado." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="logo">GV</div>
-    <h1>Gustavo Veloso</h1>
-    <div class="subtitle">Imóveis</div>
-
-    <div class="pause-icon">⏸️</div>
-
-    <div class="message">
-      <p>Serviços temporariamente suspensos.</p>
-      <p>Retornaremos em breve.</p>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-grid">
+      <div class="brand">
+        <img src="logo-site.png" alt="Logo Gustavo Veloso" class="logo" />
+        <div>
+          <h1>Gustavo Veloso Imóveis & Documentação</h1>
+          <p class="sub">Corretor de Imóveis • CRECI RJ 105.980</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#imoveis">Imóveis</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato" class="btn">Contato</a>
+        <a href="https://www.instagram.com/gustavovelosoimoveis/" target="_blank" rel="noopener" class="btn">Instagram</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="footer">
-      Obrigado pela compreensão.
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h2>Segurança, clareza e confiança em cada etapa</h2>
+      <p>
+        Atuação completa em <strong>venda, locação, administração e consultoria imobiliária e documental</strong>
+        em <strong>Maricá e região</strong>. Seu imóvel com transparência, organização e atenção aos detalhes.
+      </p>
+      <div class="cta-group">
+        <a href="#imoveis" class="btn primary">Ver imóveis</a>
+        <a href="#contato" class="btn outline">Anunciar meu imóvel</a>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre">
+    <div class="container split">
+      <div>
+        <h3>Quem sou</h3>
+        <p>
+          Há <strong>8 anos atuando diretamente com documentação imobiliária e registro de imóveis</strong>,
+          desenvolvi uma visão técnica que garante segurança jurídica em cada negociação. Hoje,
+          como corretor, uno esse conhecimento ao atendimento humano, objetivo e transparente.
+        </p>
+        <ul class="bullets">
+          <li>Atendimento em <strong>Maricá e região</strong></li>
+          <li>Comunicação clara e prazos cumpridos</li>
+          <li>Suporte completo em venda, locação, administração e consultoria documental</li>
+        </ul>
+      </div>
+      <div class="card cred">
+        <h4>Diferencial</h4>
+        <p>
+          Acompanhamento profissional, conferência documental rigorosa e etapas organizadas para
+          evitar surpresas e agilizar sua negociação.
+        </p>
+        <div class="tags">
+          <span>Documentação</span><span>Consultoria</span><span>Segurança Jurídica</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Imóveis -->
+  <section id="imoveis">
+    <div class="container">
+      <h3>Imóveis</h3>
+      <div id="cards" class="grid-cards"></div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos">
+    <div class="container split">
+      <div>
+        <h3>Serviços</h3>
+        <ul class="list-cards">
+          <li>
+            <strong>Venda de Imóveis</strong> — Avaliação, preparação, divulgação, visitas
+            e acompanhamento completo até a assinatura, com atenção documental em todas as fases.
+          </li>
+          <li>
+            <strong>Locação de Imóveis</strong> — Seleção de inquilinos, análise de documentos,
+            elaboração de contrato, vistorias e suporte contínuo.
+          </li>
+          <li>
+            <strong>Administração de Imóveis</strong> — Gestão de aluguéis, reajustes,
+            manutenção, cobranças e intermediação entre proprietário e inquilino.
+          </li>
+          <li>
+            <strong>Consultoria Imobiliária e Documental</strong> —
+            Análise de matrícula, conferência de documentos, identificação de pendências,
+            orientação técnica e apoio em procedimentos junto ao cartório e prefeitura.
+          </li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Anuncie com segurança</h4>
+        <p>Do anúncio à assinatura, você terá um ponto de contato único. Transparência total.</p>
+        <a href="#contato" class="btn primary">Quero anunciar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="contato">
+    <div class="container">
+      <h3>Contato</h3>
+      <p>Fale direto no WhatsApp ou envie sua mensagem pelo formulário.</p>
+      <div class="grid-contact">
+
+        <form id="form-contato" action="https://formspree.io/f/xdkwwvgz" method="POST" class="form">
+          <input type="text" name="nome" placeholder="Seu nome" required />
+          <input type="email" name="email" placeholder="Seu e-mail" required />
+          <input type="text" name="telefone" placeholder="Seu telefone (opcional)" />
+          <textarea name="mensagem" rows="5" placeholder="Como posso ajudar?" required></textarea>
+          <button type="submit" class="btn primary">Enviar</button>
+          <p class="form-note">* Esta página usa Formspree para envio de mensagens. Substitua o endpoint pelo seu próprio ID, se desejar.</p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Gustavo Veloso Imóveis & Documentação • CRECI RJ 105.980 • Maricá – RJ</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a class="fab" href="https://wa.me/5521979915391?text=Ol%C3%A1%20Gustavo%2C%20encontrei%20no%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20im%C3%B3veis%20dispon%C3%ADveis." target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <path fill="#ffffff" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
 </body>
 </html>
